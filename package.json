@@ -1,0 +1,48 @@
+{
+  "name": "@thewebmason/twm-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TheWebMason Smart Contracts",
+  "author": {
+    "name": "TheWebMason",
+    "email": "support@thewebmason.org",
+    "url": "https://thewebmason.org"
+  },
+  "scripts": {
+    "clean": "rimraf ./build/ && mkdirp ./build/",
+    "precompile": "yarn clean",
+    "compile": "truffle compile",
+    "predeploy": "yarn run compile",
+    "deploy": "truffle migrations --network",
+    "test": "truffle test",
+    "verify": "truffle run verify --network",
+    "flatten": "waffle flatten"
+  },
+  "homepage": "https://github.com/TheWebMason/twm-contracts#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheWebMason/twm-contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheWebMason/twm-contracts/issues",
+    "email": "support@thewebmason.org"
+  },
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "^4.0.0-alpha.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "truffle": "^5.4.17",
+    "truffle-assertions": "^0.9.2",
+    "truffle-plugin-verify": "^0.5.16"
+  }
+}
