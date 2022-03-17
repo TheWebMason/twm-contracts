@@ -15,7 +15,7 @@ contract TwmPresale is ERC20, ITwmPresale, Pausable, Ownable {
     uint256 public maxSupply = 3333;
     bool public withdrawAllowed = false;
 
-    constructor() ERC20("TWM Presale", "TWM-PRESALE") {
+    constructor() ERC20("TWM Presale", "TWM-PRE") {
         //
     }
 
